@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de produtos</title>
+    <style>
+        div {
+            background-color: rgb(219, 199, 174);
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        body {
+            background-color: rgb(221, 208, 184);
+            height: 100vh;
+            gap: 30px;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        body input {
+            gap: 1px;
+        }
+
+        .conteiner {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            gap: 20px;
+            overflow-x: auto;
+        }
+
+        .caixa {
+            width: 300px;
+            height: 350px;
+
+        }
+    </style>
+</head>
+</main>
+
+<body>
+    <main>
+        <section>
+            <h1>Categoria de produtos</h1>
+            <label for="texto">Pesquisar sobre:</label>
+            <input type="text" id="texto" name="texto">
+            <input type="submit">
+        </section>
+        <div id="produtos">
+
+        </div>
+    </main>
+    <script>
+        const catalagoProdutos = [
+            [
+                'Iphone 17 pro max',
+                'Iphone 17 pro max" 64GB de RAM',
+                'Smartphone',
+                3535.86
+            ],
+            [
+                'PS5 pro',
+                'PS5 pro" 16 de RAM',
+                'Videogame', 
+                4564.98
+            ],
+            [
+                'Notebook lenovo', 
+                'Notebook lenovo" 8 de RAM', 
+                'Notebook', 
+                3967.98
+            ],
+            [
+                'Xbox 360', 
+                'Xbox 360" 4 de RAM', 
+                'Videogame', 
+                3961.98
+            ]
+        ];
+
+        catalagoProdutos.forEach(produtos => {
+            const Caixa = document.createElement('div');
+            const Produto = document.createElement('p');
+
+            produtos.forEach((index, iten) => {
+                console.log(index);
+                const tag = iten === 0 ? 'h1' : 'p';
+                const PRODUTO = document.createElement(tag);
+                PRODUTO.innerText = index;
+                Caixa.appendChild(PRODUTO);
+            })
+            const Produtos = document.getElementById('produtos');
+            Caixa.classList.add('caixa');
+            Produtos.classList.add('conteiner')
+            Produtos.appendChild(Caixa);
+        });
+    </script>
+</body>
+
+</html>
