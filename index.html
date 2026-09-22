@@ -8,7 +8,7 @@
     <style>
         div {
             background-color: rgb(219, 199, 174);
-            
+            border: solid 8px black;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -19,14 +19,9 @@
             background-color: rgb(221, 208, 184);
             height: 100vh;
             gap: 30px;
-            width: 100vw;
+            width: 96vw;
             height: 100vh;
         }
-
-        body input {
-            gap: 1px;
-        }
-
         .conteiner {
             width: 100%;
             display: flex;
@@ -41,9 +36,19 @@
             height: 350px;
 
         }
+        #produtos{
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            padding: 20px;
+        }
+        p{
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        h1{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
     </style>
 </head>
-</main>
 
 <body>
     <main>
@@ -53,13 +58,14 @@
             <input type="text" id="texto" name="texto">
             <input type="submit">
         </section>
-        <div id="produtos">
+        <section id="produtos">
 
-        </div>
+        </section>
     </main>
     <script>
         const catalagoProdutos = [
             [
+                'assets/images/iphone.png',
                 'Iphone 17 pro max',
                 'Iphone 17 pro max" 64GB de RAM',
                 'Smartphone',
@@ -82,23 +88,34 @@
                 'Xbox 360" 4 de RAM', 
                 'Videogame', 
                 3961.98
+            ],
+            [
+                'Xbox 360', 
+                'Xbox 360" 4 de RAM', 
+                'Videogame', 
+                3961.98
             ]
         ];
 
         catalagoProdutos.forEach(produtos => {
             const Caixa = document.createElement('div');
             const Produto = document.createElement('p');
+            produtos.forEach((iten, index) => {
+                if(index === 0) {
+                    const image = document.createElement('img');
+                    image.src = iten;
+                    Caixa.appendChild(image);
 
-            produtos.forEach((index, iten) => {
-                console.log(index);
-                const tag = iten === 0 ? 'h1' : 'p';
+                }
+                console.log(iten);
+                const tag = index === 1 ? 'h1' : 'p';
                 const PRODUTO = document.createElement(tag);
-                PRODUTO.innerText = index;
+                PRODUTO.innerText = iten;
                 Caixa.appendChild(PRODUTO);
             })
             const Produtos = document.getElementById('produtos');
             Caixa.classList.add('caixa');
-            Produtos.classList.add('conteiner')
+            Produtos.classList.add('conteiner');
             Produtos.appendChild(Caixa);
         });
     </script>
