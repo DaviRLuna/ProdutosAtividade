@@ -99,176 +99,32 @@
     </main>
     <script>
         const catalagoProdutos = [
-            [
-                'assets/images/iphone.png',
-                'Iphone 17 pro max',
-                'Iphone 17 pro max" 64GB de RAM',
-                'Smartphone',
-                9875.86
-            ],
-            [
-                'assets/images/Iphone17.png',
-                'Iphone 17',
-                'Iphone 17" 32GB de RAM',
-                'Smartphone',
-                3535.86
-            ],
-            [
-                'assets/images/Samsung26Ultra.png',
-                'Samsung s26 Ultra',
-                'Samsung s26 Ultra" 128GB de RAM',
-                'Smartphone',
-                8976.86
-            ],
-            [
-                'assets/images/Samsung26.png',
-                'Samsung s26',
-                'Samsung s26" 64GB de RAM',
-                'Smartphone',
-                4789.99
-            ],
-            [
-                'assets/images/A32.png',
-                'Samsung A32',
-                'Samsung A32" 32GB de RAM',
-                'Smartphone',
-                1235.86
-            ],
-            [
-                'assets/images/Xiaomi.png',
-                'Xiaomi note 13',
-                'Xiaomi note 13" 32GB de RAM',
-                'Smartphone',
-                1500.00
-            ],
-            [
-                'assets/images/iphone.png',
-                'Iphone 17 pro max',
-                'Iphone 17 pro max" 64GB de RAM',
-                'Smartphone',
-                3535.86
-            ],
-
-            [
-                'assets/images/PS5Pro.png',
-                'PS5 pro',
-                'PS5 pro" 128GB de RAM',
-                'Videogame', 
-                4564.98
-            ],
-            [
-                'assets/images/PS5.webp',
-                'PS5',
-                'Playstation 5" 128GB de RAM',
-                'Videogame', 
-                4564.98
-            ],
-            [
-                'assets/images/ps4pro.webp',
-                'PS4 pro',
-                'Playstation 4 pro" 64GB de RAM',
-                'Videogame', 
-                4564.98
-            ],
-            [
-                'assets/images/ps4.webp',
-                'PS4',
-                'Playstation 4" 64GB de RAM',
-                'Videogame', 
-                4564.98
-            ],
-            [
-                'assets/images/PS5Pro.png',
-                'PS5 pro',
-                'PS5 pro" 16 de RAM',
-                'Videogame', 
-                4564.98
-            ],
-            [
-                'assets/images/PS5Pro.png',
-                'PS5 pro',
-                'PS5 pro" 16 de RAM',
-                'Videogame', 
-                4564.98
-            ],
-            [
-                'assets/images/PS5Pro.png',
-                'PS5 pro',
-                'PS5 pro" 16 de RAM',
-                'Videogame', 
-                4564.98
-            ],
-            [
-                'assets/images/PS5Pro.png',
-                'PS5 pro',
-                'PS5 pro" 16 de RAM',
-                'Videogame', 
-                4564.98
-            ],
-            [
-                'assets/images/PS5Pro.png',
-                'PS5 pro',
-                'PS5 pro" 16 de RAM',
-                'Videogame', 
-                4564.98
-            ],
-            [
-                'assets/images/PS5Pro.png',
-                'PS5 pro',
-                'PS5 pro" 16 de RAM',
-                'Videogame', 
-                4564.98
-            ],
-            [
-                'assets/images/PS5Pro.png',
-                'PS5 pro',
-                'PS5 pro" 16 de RAM',
-                'Videogame', 
-                4564.98
-            ],
-            [
-                'Notebook lenovo', 
-                'Notebook lenovo" 8 de RAM', 
-                'Notebook', 
-                3967.98
-            ],
-            [
-                'Xbox 360', 
-                'Xbox 360" 4 de RAM', 
-                'Videogame', 
-                3961.98
-            ],
-            [
-                'Xbox 360', 
-                'Xbox 360" 4 de RAM', 
-                'Videogame', 
-                3961.98
-            ]
+            {
+                imagem: "assets/images/iphone.png",
+                produto: 'Iphone 17 pro max',
+                descricao: 'Iphone 17 pro max" 64GB de RAM',
+                tipo: 'Smartphone',
+                preco: 9875.86
+            },
         ];
         function criarProduto(){
-        catalagoProdutos.forEach(produtos => {
-            const Caixa = document.createElement('div');
-            const Produto = document.createElement('p');
-            produtos.forEach((iten, index) => {
-                if(index === 0) {
+            catalagoProdutos.forEach(produtos =>{
+                const Caixa = document.createElement('div');
+                const Produto = document.createElement('p');
+
+                produtos.forEach((iten, index) =>{
+                    if(index === 0) {
                     const image = document.createElement('img');
                     image.src = iten;
                     Caixa.appendChild(image);
                     return;
-                }
-                console.log(iten);
-                const tag = index === 1 ? 'h1' : 'p';
-                const PRODUTO = document.createElement(tag);
-                PRODUTO.innerText = iten;
-                Caixa.appendChild(PRODUTO);
+                    }
+                    for(let i = 0; i< produtos.forEach; i++){
+                        
+                    }
+                })
             })
-            const Produtos = document.getElementById('produtos');
-            Caixa.classList.add('caixa');
-            Produtos.classList.add('conteiner');
-            Produtos.appendChild(Caixa);
-        });
-    }
-    criarProduto();
+        }
     </script>
 </body>
 
