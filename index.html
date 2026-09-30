@@ -33,7 +33,9 @@
         .caixa {
             width: 280px;
             height: 440px;
-
+            display: flex;
+            justify-content: center;
+            align-items: center
         }
         header{
             display:flex;
@@ -46,12 +48,16 @@
             gap: 20px;
         }
         #produtos{
+            background-color: blue;
             display: grid;
             grid-template-columns: auto auto auto auto;
             padding: 20px;
+            gap: 10px;
+            text-align: center;
         }
         p{
             font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            padding: 10px;
         }
         header h1{
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -99,32 +105,128 @@
     </main>
     <script>
         const catalagoProdutos = [
-            {
-                imagem: "assets/images/iphone.png",
-                produto: 'Iphone 17 pro max',
-                descricao: 'Iphone 17 pro max" 64GB de RAM',
-                tipo: 'Smartphone',
-                preco: 9875.86
-            },
-        ];
-        function criarProduto(){
-            catalagoProdutos.forEach(produtos =>{
+    {
+        imagem: "assets/images/iphone.png",
+        produto: 'iPhone 17 Pro Max',
+        descricao: 'iPhone 17 Pro Max 256GB, 12GB de RAM, tela Super Retina XDR de 6,9"',
+        tipo: 'Smartphone',
+        preco: 'R$9875,86'
+    },
+    {
+        imagem: "assets/images/galaxy-s25-ultra.png",
+        produto: 'Samsung Galaxy S25 Ultra',
+        descricao: 'Galaxy S25 Ultra 256GB, 12GB de RAM, Snapdragon 8 Elite, tela Dynamic AMOLED de 6,9"',
+        tipo: 'Smartphone',
+        preco: 8499.00
+    },
+    {
+        imagem: "assets/images/pixel-10-pro.png",
+        produto: 'Google Pixel 10 Pro',
+        descricao: 'Pixel 10 Pro 256GB, 16GB de RAM, chip Tensor G5, tela OLED de 6,3"',
+        tipo: 'Smartphone',
+        preco: 8999.00
+    },
+    {
+        imagem: "assets/images/xiaomi-15.png",
+        produto: 'Xiaomi 15',
+        descricao: 'Xiaomi 15 256GB, 12GB de RAM, Snapdragon 8 Elite, tela AMOLED de 6,36", câmeras Leica',
+        tipo: 'Smartphone',
+        preco: 5999.00
+    },
+    {
+        imagem: "assets/images/motorola-edge-60-pro.png",
+        produto: 'Motorola Edge 60 Pro',
+        descricao: 'Edge 60 Pro 512GB, 12GB de RAM, MediaTek Dimensity 8350 Extreme, tela pOLED de 6,7"',
+        tipo: 'Smartphone',
+        preco: 3999.00
+    },
+    {
+        imagem: "assets/images/oneplus-13.png",
+        produto: 'OnePlus 13',
+        descricao: 'OnePlus 13 256GB, 12GB de RAM, Snapdragon 8 Elite, tela AMOLED de 6,82", bateria de 6000 mAh',
+        tipo: 'Smartphone',
+        preco: 5499.00
+    },
+    {
+        imagem: "assets/images/nothing-phone-3.png",
+        produto: 'Nothing Phone (3)',
+        descricao: 'Nothing Phone (3) 256GB, 12GB de RAM, Snapdragon 8s Gen 4, tela AMOLED de 6,67"',
+        tipo: 'Smartphone',
+        preco: 5299.00
+    },
+    {
+        imagem: "assets/images/oppo-find-x8-pro.png",
+        produto: 'Oppo Find X8 Pro',
+        descricao: 'Find X8 Pro 512GB, 16GB de RAM, MediaTek Dimensity 9400, tela AMOLED de 6,78"',
+        tipo: 'Smartphone',
+        preco: 7299.00
+    },
+    {
+        imagem: "assets/images/sony-xperia-1-vii.png",
+        produto: 'Sony Xperia 1 VII',
+        descricao: 'Xperia 1 VII 256GB, 12GB de RAM, Snapdragon 8 Elite, tela OLED de 6,5"',
+        tipo: 'Smartphone',
+        preco: 9499.00
+    },
+    {
+        imagem: "assets/images/asus-rog-phone-9-pro.png",
+        produto: 'Asus ROG Phone 9 Pro',
+        descricao: 'ROG Phone 9 Pro 512GB, 16GB de RAM, Snapdragon 8 Elite, tela AMOLED de 6,78" 185Hz',
+        tipo: 'Smartphone',
+        preco: 8999.00
+    },
+    {
+        imagem: "assets/images/honor-magic7-pro.png",
+        produto: 'Honor Magic7 Pro',
+        descricao: 'Magic7 Pro 512GB, 12GB de RAM, Snapdragon 8 Elite, tela OLED de 6,8"',
+        tipo: 'Smartphone',
+        preco: 6499.00
+    }
+];
+        
+        const sectionCards = document.getElementById('produtos');
+        const inputPesquisa = document.getElementById('texto');
+
+        function criarProduto(produtos){
+            sectionCards.innerHTML = '';
+
+            produtos.forEach(produtos =>{
                 const Caixa = document.createElement('div');
                 const Produto = document.createElement('p');
+                const Titulo = document.createElement('h1');
+                const img = document.createElement('img');
 
-                produtos.forEach((iten, index) =>{
-                    if(index === 0) {
-                    const image = document.createElement('img');
-                    image.src = iten;
-                    Caixa.appendChild(image);
-                    return;
-                    }
-                    for(let i = 0; i< produtos.forEach; i++){
-                        
-                    }
-                })
+
+                Produto.innerHTML = `${produtos.produto} <br> ${produtos.descricao} <br> ${produtos.tipo} <br> ${produtos.preco}`;
+                img.src = produtos.imagem;
+                Caixa.classList.add('caixa');
+                Caixa.appendChild(img);
+                Caixa.appendChild(Produto);
+                sectionCards.appendChild(Caixa);
             })
         }
+        function pesquisar() {
+            const produtoDesejado = texto.value.trim();
+
+            const produtosCorrespondentes = catalagoProdutos.filter((produto) => {
+                return produto.produto.toLowerCase().includes(produtoDesejado.toLowerCase());
+            })
+
+            if(produtosCorrespondentes.length == 0) {
+                sectionCards.innerHTML = '';
+
+                const mensagem = document.createElement('p');
+                mensagem.textContent = 'Não há esse produto';
+
+                sectionCards.appendChild(mensagem);
+                return;
+            } else {
+                criarProduto(produtosCorrespondentes);
+            }
+        }
+
+        inputPesquisa.addEventListener('input', pesquisar);
+        criarProduto(catalagoProdutos);
     </script>
 </body>
 
