@@ -237,22 +237,48 @@ const catalagoProdutos = [
             const [dia, mes, ano] = produto.data.split('/');
             return new Date(ano, mes - 1, dia);
         }
-        function verificarData(ordem){
-            const copia = [...catalagoProdutos];
+        function verificarData(ordem) {
+           const copia = [...catalagoProdutos];
 
-        copia.sort(function (a, b) {
-        const dataA = pegarData(a);
-        const dataB = pegarData(b);
-        if(ordem == 'recentes'){
-        return dataB - dataA;
+           copia.sort(function (a, b) {
+             const dataA = pegarData(a);
+             const dataB = pegarData(b);
+
+             if (ordem == 'recentes') {
+            return dataB - dataA;
         }
-        if(ordem == 'antigos'){
-        return dataB - dataA;
-        return;
+            if (ordem == 'antigos') {
+            return dataA - dataB;
         }
-        });
-        criarProduto(copia);
+    });
+
+    criarProduto(copia);
+    sectionCards.classList.remove('containerCentralizado');
+}
+
+function pegarPreco(produto) {
+    const texto = produto.preco.replace('R$', '').replace(',', '.');
+    return parseFloat(texto);
+}
+
+function verificarPreco(ordem) {
+    const copia = [...catalagoProdutos];
+
+    copia.sort(function (a, b) {
+        const precoA = pegarPreco(a);
+        const precoB = pegarPreco(b);
+
+        if (ordem == 'caros') {
+            return precoB - precoA;
         }
+        if (ordem == 'baratos') {
+            return precoA - precoB;
+        }
+    });
+
+    criarProduto(copia);
+    sectionCards.classList.remove('containerCentralizado');
+}
 
         inputPesquisa.addEventListener('input', pesquisar);
         criarProduto(catalagoProdutos);
