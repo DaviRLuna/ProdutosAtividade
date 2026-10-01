@@ -5,17 +5,11 @@
         }
 
         body {
-            margin: 0;
-            min-height: 100dvh;
-            background-color: #272219;     }
-
-        .conteiner {
-            width: 97%;
+            background-color: #272219;     
             display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            gap: 10px;
-            overflow-x: auto;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
 
         .caixa {
@@ -39,28 +33,34 @@
 
         header {
             display: flex;
-            /*position: sticky;*/
             top: 0;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            background-color: #ff8800d8;
+            background-color: #ff88008e;
             border-radius: 10px;
             box-shadow: 5px 5px 0px black;
             border: 2px solid black;
-            width: 100%;
+            width: 98%;
             height: 300px;
             gap: 20px;
         }
 
-        #produtos {
+        .container {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             padding: 20px;
             gap: 20px;
             text-align: center;
         }
-
+        .containerCentralizado{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+            gap: 20px;
+            text-align: center;
+        }
         p {
             font-family: "Bricolage Grotesque", sans-serif;
             padding: 10px;
@@ -79,22 +79,51 @@
             gap: 20px;
         }
 
-        button {
-            width: 150px;
-            height: 50px;
-            border-radius: 10px;
-            background-color: rgb(255, 255, 255);
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        }
-
         img {
             height: 200px;
             width: 200px;
             object-fit: cover;
         }
 
-        main {
+        .sideBar{
+            margin: 0;
+            padding: 0;
+            width: auto;
+            overflow: hidden;
+        }
+        .sideBar button {
+            display: block;
+            padding: 16px;
+            text-decoration: none;
+            width: 150px;
+            height: 50px;
+            border-radius: 10px;
+            background-color: rgb(255, 255, 255);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .sideBar button:hover{
+            background-color: #743c2a;
+            transition: 1s ease;
+        }
+        input{
+            text-decoration: none;
+            border-radius: 5px;
+            background-color: #743d2a70;
+           
+        }
+        label{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .caixaNaoEncontrada{
+            width: 550px;
+            height: 440px;
             display: flex;
+            justify-content: center;
             align-items: center;
             flex-direction: column;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 0px rgba(55, 16, 0, 0.856);
+            background-color: #743c2a;
+            color: #ffddb6;
         }

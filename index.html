@@ -14,11 +14,11 @@
 <body>
     <header>
         <h1>GEEKMARKET</h1>
-        <article>
-            <button>Celulares</button>
-            <button>Notebooks</button>
-            <button>Videogames</button>
-            <button>Outros</button>
+        <article class="sideBar">
+            <button>Maior preço</button>
+            <button>Menor preço</button>
+            <button onclick="verificarData('recentes')">Mais recentes</button>
+            <button onclick="verificarData('antigos')">Menos recentes</button>
         </article>
         <section>
             <label for="texto">Pesquisar sobre:</label>
@@ -27,7 +27,7 @@
     </header>
 
     <main>
-        <section id="produtos">
+        <section class="container" id="container">
 
         </section>
     </main>
