@@ -1,97 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
     <title>Loja de produtos</title>
-    <style>
-        div {
-            background-color: rgb(219, 179, 131);
-            border: solid 1px black;
-            border-radius: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-
-        body {
-            background-color:rgb(150, 150, 167);
-            height: 100vh;
-            gap: 30px;
-            height: 100vh;
-        }
-        .conteiner {
-            width: 97%;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            gap: 10px;
-            overflow-x: auto;
-        }
-
-        .caixa {
-            width: 280px;
-            height: 440px;
-            display: flex;
-            justify-content: center;
-            align-items: center
-        }
-        header{
-            display:flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            background-color: rgb(255, 255, 254);
-            border-radius: 10px;
-            border: 2px solid black;
-            width: 100%;
-            height: 300px;
-            gap: 20px;
-        }
-        #produtos{
-            display: grid;
-            grid-template-columns: auto auto auto auto;
-            padding: 20px;
-            gap: 10px;
-            text-align: center;
-        }
-        p{
-            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            padding: 10px;
-        }
-        header h1{
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            font-size: 4rem;
-        }
-        article{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-        }
-        button{
-            width: 150px;
-            height: 50px;
-            border-radius: 10px;
-            background-color: rgb(255, 255, 255);
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        }
-        img{
-            height: 200px;
-        }
-    </style>
 </head>
 
 <body>
     <header>
         <h1>GEEKMARKET</h1>
         <article>
-          <button>Celulares</button>
-          <button>Notebooks</button>
-          <button>Videogames</button>
-          <button>Outros</button>
+            <button>Celulares</button>
+            <button>Notebooks</button>
+            <button>Videogames</button>
+            <button>Outros</button>
         </article>
         <section>
             <label for="texto">Pesquisar sobre:</label>
@@ -104,221 +31,7 @@
 
         </section>
     </main>
-    <script>
-       const catalagoProdutos = [
-    // ===== CELULARES =====
-    {
-        imagem: "assets/images/celulares/iphone.png",
-        produto: 'iPhone 17 Pro Max',
-        descricao: '256GB, 12GB de RAM, chip A19 Pro, tela OLED de 6,9"',
-        tipo: 'Smartphone',
-        preco: 'R$9875,86'
-    },
-    {
-        imagem: "assets/images/celulares/Samsungs26.png",
-        produto: 'Samsung Galaxy S25 Ultra',
-        descricao: '256GB, 12GB de RAM, Snapdragon 8 Elite, tela AMOLED de 6,9"',
-        tipo: 'Smartphone',
-        preco: 'R$8499'
-    },
-    {
-        imagem: "assets/images/celulares/googlePixel.png",
-        produto: 'Google Pixel 10 Pro',
-        descricao: '256GB, 16GB de RAM, chip Tensor G5, tela OLED de 6,3"',
-        tipo: 'Smartphone',
-        preco: 'R$8999'
-    },
-    {
-        imagem: "assets/images/celulares/XiaomiUltra.png",
-        produto: 'Xiaomi 15',
-        descricao: '256GB, 12GB de RAM, Snapdragon 8 Elite, tela AMOLED de 6,36"',
-        tipo: 'Smartphone',
-        preco: 'R$5999'
-    },
-    {
-        imagem: "assets/images/celulares/edgePro.png",
-        produto: 'Motorola Edge 60 Pro',
-        descricao: '512GB, 12GB de RAM, Dimensity 8350 Extreme, tela pOLED de 6,7"',
-        tipo: 'Smartphone',
-        preco: 'R$3999'
-    },
-    {
-        imagem: "assets/images/celulares/OnePlus13.png",
-        produto: 'OnePlus 13',
-        descricao: '256GB, 12GB de RAM, Snapdragon 8 Elite, tela AMOLED de 6,82"',
-        tipo: 'Smartphone',
-        preco: 'R$5499'
-    },
-    {
-        imagem: "assets/images/celulares/NothingPhone.png",
-        produto: 'Nothing Phone (3)',
-        descricao: '256GB, 12GB de RAM, Snapdragon 8s Gen 4, tela AMOLED de 6,67"',
-        tipo: 'Smartphone',
-        preco: 'R$5299'
-    },
-    {
-        imagem: "assets/images/celulares/Oppo.png",
-        produto: 'Oppo Find X8 Pro',
-        descricao: '512GB, 16GB de RAM, Dimensity 9400, tela AMOLED de 6,78"',
-        tipo: 'Smartphone',
-        preco: 'R$7299'
-    },
-    {
-        imagem: "assets/images/celulares/SonyXperia.png",
-        produto: 'Sony Xperia 1 VII',
-        descricao: '256GB, 12GB de RAM, Snapdragon 8 Elite, tela OLED de 6,5"',
-        tipo: 'Smartphone',
-        preco: 'R$9499'
-    },
-    {
-        imagem: "assets/images/celulares/ROGPhone.png",
-        produto: 'Asus ROG Phone 9 Pro',
-        descricao: '512GB, 16GB de RAM, Snapdragon 8 Elite, tela AMOLED de 6,78"',
-        tipo: 'Smartphone',
-        preco: 'R$8999'
-    },
-    {
-        imagem: "assets/images/celulares/HONOR.avif",
-        produto: 'Honor Magic7 Pro',
-        descricao: '512GB, 12GB de RAM, Snapdragon 8 Elite, tela OLED de 6,8"',
-        tipo: 'Smartphone',
-        preco: 'R$6499'
-    },
-
-    // ===== VIDEOGAMES =====
-    {
-        imagem: "assets/images/consoles/PS5Pro.png",
-        produto: 'PlayStation 5 Pro',
-        descricao: '2TB de SSD, 16GB de RAM, GPU de 16,7 TFLOPs, saída 8K',
-        tipo: 'Videogame',
-        preco: 'R$6999'
-    },
-    {
-        imagem: "assets/images/consoles/PS5Slim.png",
-        produto: 'PlayStation 5 Slim',
-        descricao: '1TB de SSD, 16GB de RAM, GPU de 10,3 TFLOPs, leitor 4K',
-        tipo: 'Videogame',
-        preco: 'R$3999'
-    },
-    {
-        imagem: "assets/images/consoles/xboxX.png",
-        produto: 'Xbox Series X',
-        descricao: '1TB de SSD, 16GB de RAM, GPU de 12 TFLOPs, leitor 4K',
-        tipo: 'Videogame',
-        preco: 'R$4999'
-    },
-    {
-        imagem: "assets/images/consoles/xboxS.png",
-        produto: 'Xbox Series S',
-        descricao: '512GB de SSD, 10GB de RAM, GPU de 4 TFLOPs, sem leitor',
-        tipo: 'Videogame',
-        preco: 'R$2799'
-    },
-    {
-        imagem: "assets/images/consoles/switch2.png",
-        produto: 'Nintendo Switch 2',
-        descricao: '256GB, 12GB de RAM, tela LCD de 7,9", modo portátil e TV',
-        tipo: 'Videogame',
-        preco: 'R$4299'
-    },
-    {
-        imagem: "assets/images/consoles/SteamDeck.png",
-        produto: 'Steam Deck OLED',
-        descricao: '512GB, 16GB de RAM, chip AMD customizado, tela OLED de 7,4"',
-        tipo: 'Videogame',
-        preco: 'R$4999'
-    },
-    {
-        imagem: "assets/images/consoles/kv-box.png",
-        produto: 'ROG Xbox Ally X',
-        descricao: '1TB, 24GB de RAM, Ryzen Z2 Extreme, tela IPS de 7"',
-        tipo: 'Videogame',
-        preco: 'R$7999'
-    },
-
-    // ===== JOGOS =====
-    {
-        imagem: "assets/images/jogos/GOWR.png",
-        produto: 'God of War Ragnarök',
-        descricao: 'Ação e aventura, PS5, 1 jogador, mídia física',
-        tipo: 'Jogo',
-        preco: 'R$199,90'
-    },
-    {
-        imagem: "assets/images/jogos/EldenRing.png",
-        produto: 'Elden Ring',
-        descricao: 'RPG de ação, PS5, 1 a 4 jogadores, mídia física',
-        tipo: 'Jogo',
-        preco: 'R$229,90'
-    },
-    {
-        imagem: "assets/images/jogos/Zelda.png",
-        produto: 'Zelda',
-        descricao: 'Aventura, Nintendo Switch, 1 jogador, mídia física',
-        tipo: 'Jogo',
-        preco: 'R$349,90'
-    },
-    {
-        imagem: "assets/images/jogos/Silksong.png",
-        produto: 'Hollow Knight: Silksong',
-        descricao: 'Aventura 2D, Nintendo Switch, 1 jogador, mídia digital',
-        tipo: 'Jogo',
-        preco: 'R$69,90'
-    },
-    {
-        imagem: "assets/images/jogos/BaldursGate.png",
-        produto: "Baldur's Gate 3",
-        descricao: 'RPG de turnos, PS5, 1 a 4 jogadores, mídia física',
-        tipo: 'Jogo',
-        preco: 'R$249,90'
-    }
-];
-        
-        const sectionCards = document.getElementById('produtos');
-        const inputPesquisa = document.getElementById('texto');
-
-        function criarProduto(produtos){
-            sectionCards.innerHTML = '';
-
-            produtos.forEach(produtos =>{
-                const Caixa = document.createElement('div');
-                const Produto = document.createElement('p');
-                const Titulo = document.createElement('h2');
-                const img = document.createElement('img');
-
-                Titulo.textContent = produtos.produto
-                Produto.innerHTML = `<br> ${produtos.descricao} <br> ${produtos.tipo} <br> ${produtos.preco}`;
-                img.src = produtos.imagem;
-                Caixa.classList.add('caixa');
-                Caixa.appendChild(img);
-                Caixa.appendChild(Titulo);
-                Caixa.appendChild(Produto);
-                sectionCards.appendChild(Caixa);
-            })
-        }
-        function pesquisar() {
-            const produtoDesejado = texto.value.trim();
-
-            const produtosCorrespondentes = catalagoProdutos.filter((produto) => {
-                return produto.produto.toLowerCase().includes(produtoDesejado.toLowerCase());
-            })
-
-            if(produtosCorrespondentes.length == 0) {
-                sectionCards.innerHTML = '';
-
-                const mensagem = document.createElement('p');
-                mensagem.textContent = 'Não há esse produto';
-
-                sectionCards.appendChild(mensagem);
-                return;
-            } else {
-                criarProduto(produtosCorrespondentes);
-            }
-        }
-
-        inputPesquisa.addEventListener('input', pesquisar);
-        criarProduto(catalagoProdutos);
-    </script>
+    <script src="js/index.js"></script>
 </body>
 
 </html>
