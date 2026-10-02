@@ -16,30 +16,6 @@ const catalagoProdutos = [
         preco: 'R$8499'
     },
     {
-        imagem: "assets/images/celulares/googlePixel.png",
-        produto: 'Google Pixel 10 Pro',
-        descricao: '256GB, 16GB de RAM, chip Tensor G5, tela OLED de 6,3"',
-        tipo: 'Smartphone',
-        data: '28/08/2025',
-        preco: 'R$8999'
-    },
-    {
-        imagem: "assets/images/celulares/XiaomiUltra.png",
-        produto: 'Xiaomi 15',
-        descricao: '256GB, 12GB de RAM, Snapdragon 8 Elite, tela AMOLED de 6,36"',
-        tipo: 'Smartphone',
-        data: '02/03/2025',
-        preco: 'R$5999'
-    },
-    {
-        imagem: "assets/images/celulares/edgePro.png",
-        produto: 'Motorola Edge 60 Pro',
-        descricao: '512GB, 12GB de RAM, Dimensity 8350 Extreme, tela pOLED de 6,7"',
-        tipo: 'Smartphone',
-        data: '24/04/2025',
-        preco: 'R$3999'
-    },
-    {
         imagem: "assets/images/celulares/OnePlus13.png",
         produto: 'OnePlus 13',
         descricao: '256GB, 12GB de RAM, Snapdragon 8 Elite, tela AMOLED de 6,82"',
@@ -55,38 +31,6 @@ const catalagoProdutos = [
         data: '15/07/2025',
         preco: 'R$5299'
     },
-    {
-        imagem: "assets/images/celulares/Oppo.png",
-        produto: 'Oppo Find X8 Pro',
-        descricao: '512GB, 16GB de RAM, Dimensity 9400, tela AMOLED de 6,78"',
-        tipo: 'Smartphone',
-        data: '21/11/2024',
-        preco: 'R$7299'
-    },
-    {
-        imagem: "assets/images/celulares/SonyXperia.png",
-        produto: 'Sony Xperia 1 VII',
-        descricao: '256GB, 12GB de RAM, Snapdragon 8 Elite, tela OLED de 6,5"',
-        tipo: 'Smartphone',
-        data: '13/05/2025',
-        preco: 'R$9499'
-    },
-    {
-        imagem: "assets/images/celulares/ROGPhone.png",
-        produto: 'Asus ROG Phone 9 Pro',
-        descricao: '512GB, 16GB de RAM, Snapdragon 8 Elite, tela AMOLED de 6,78"',
-        tipo: 'Smartphone',
-        data: '19/11/2024',
-        preco: 'R$8999'
-    },
-    {
-        imagem: "assets/images/celulares/HONOR.avif",
-        produto: 'Honor Magic7 Pro',
-        descricao: '512GB, 12GB de RAM, Snapdragon 8 Elite, tela OLED de 6,8"',
-        tipo: 'Smartphone',
-        data: '15/01/2025',
-        preco: 'R$6499'
-    },
 
     {
         imagem: "assets/images/consoles/PS5Pro.png",
@@ -95,14 +39,6 @@ const catalagoProdutos = [
         tipo: 'Videogame',
         data: '07/11/2024',
         preco: 'R$6999'
-    },
-    {
-        imagem: "assets/images/consoles/PS5Slim.png",
-        produto: 'PlayStation 5 Slim',
-        descricao: '1TB de SSD, 16GB de RAM, GPU de 10,3 TFLOPs, leitor 4K',
-        tipo: 'Videogame',
-        data: '10/11/2023',
-        preco: 'R$3999'
     },
     {
         imagem: "assets/images/consoles/xboxX.png",
@@ -127,22 +63,6 @@ const catalagoProdutos = [
         tipo: 'Videogame',
         data: '05/06/2025',
         preco: 'R$4299'
-    },
-    {
-        imagem: "assets/images/consoles/SteamDeck.png",
-        produto: 'Steam Deck OLED',
-        descricao: '512GB, 16GB de RAM, chip AMD customizado, tela OLED de 7,4"',
-        tipo: 'Videogame',
-        data: '16/11/2023',
-        preco: 'R$4999'
-    },
-    {
-        imagem: "assets/images/consoles/kv-box.png",
-        produto: 'ROG Xbox Ally X',
-        descricao: '1TB, 24GB de RAM, Ryzen Z2 Extreme, tela IPS de 7"',
-        tipo: 'Videogame',
-        data: '16/10/2025',
-        preco: 'R$7999'
     },
 
     {
@@ -177,15 +97,6 @@ const catalagoProdutos = [
         data: '04/09/2025',
         preco: 'R$69,90'
     },
-    {
-        imagem: "assets/images/jogos/BaldursGate.png",
-        produto: "Baldur's Gate 3",
-        descricao: 'RPG de turnos, PS5, 1 a 4 jogadores, mídia física',
-        tipo: 'Jogo',
-        data: '06/09/2023',
-        preco: 'R$249,90'
-    },
-
     {
         imagem: "assets/images/quadrinhos/Watchmen.jpg",
         produto: 'Watchmen',
@@ -251,14 +162,6 @@ const catalagoProdutos = [
         data: '20/06/2024',
         preco: 'R$84,90'
     },
-    {
-        imagem: "assets/images/camisas/pikachu.png",
-        produto: 'Camiseta Pokémon Pikachu',
-        descricao: '100% algodão, estampa frontal, modelagem regular, cor amarela',
-        tipo: 'Camisa',
-        data: '27/02/2024',
-        preco: 'R$74,90'
-    },
 
     {
         imagem: "assets/images/actionfigures/Kratos.png",
@@ -292,14 +195,6 @@ const catalagoProdutos = [
         data: '22/10/2023',
         preco: 'R$279,90'
     },
-    {
-        imagem: "assets/images/actionfigures/mario.png",
-        produto: 'Action Figure Mario',
-        descricao: 'Super Mario, 10 cm de altura, articulado, com cogumelo',
-        tipo: 'Action Figure',
-        data: '03/04/2023',
-        preco: 'R$149,90'
-    }
 ];
         const sectionCards = document.getElementById('container');
         const inputPesquisa = document.getElementById('texto');
@@ -332,7 +227,10 @@ const catalagoProdutos = [
             const produtoDesejado = texto.value.trim();
 
             const produtosCorrespondentes = catalagoProdutos.filter((produto) => {
-                return produto.produto.toLowerCase().includes(produtoDesejado.toLowerCase());
+                 return produto.produto.toLowerCase().includes(produtoDesejado.toLowerCase()) ||
+                        produto.descricao.toLowerCase().includes(produtoDesejado.toLowerCase()) ||
+                        produto.tipo.toLowerCase().includes(produtoDesejado.toLowerCase())
+
             })
 
             if (produtosCorrespondentes.length == 0) {

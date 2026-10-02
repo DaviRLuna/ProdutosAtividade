@@ -134,7 +134,9 @@
         }
 
         .buttonComprar{
-            display: block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             padding: 16px;
             text-decoration: none;
             width: 150px;
@@ -142,4 +144,9 @@
             border-radius: 10px;
             background-color: rgb(159, 152, 26);
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .buttonComprar:hover{
+            font-size: 1.1rem;
+            transition: 1s ease;
         }
