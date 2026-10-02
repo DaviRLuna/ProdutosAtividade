@@ -36,14 +36,15 @@
             top: 0;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
+            flex-direction: row;
             background-color: #ff88008e;
             border-radius: 10px;
             box-shadow: 5px 5px 0px black;
             border: 2px solid black;
             width: 98%;
-            height: 300px;
-            gap: 20px;
+            height: 100px;
+            gap: 100px;
+            padding: 20px;
         }
 
         .container {
@@ -96,23 +97,27 @@
             padding: 16px;
             text-decoration: none;
             width: 150px;
-            height: 50px;
+            height: 20%;
             border-radius: 10px;
-            background-color: rgb(255, 255, 255);
+            background-color: #272219;
+            color: #ffddb6;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         }
         .sideBar button:hover{
-            background-color: #743c2a;
-            transition: 1s ease;
+            background-color:#ffddb6;
+            color: #272219;
+            transition: 2s ease;
         }
         input{
             text-decoration: none;
             border-radius: 5px;
             background-color: #743d2a70;
+            color: #ffddb6;
            
         }
         label{
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: #ffddb6;
         }
         .caixaNaoEncontrada{
             width: 550px;
@@ -126,4 +131,15 @@
             box-shadow: 5px 5px 0px rgba(55, 16, 0, 0.856);
             background-color: #743c2a;
             color: #ffddb6;
+        }
+
+        .buttonComprar{
+            display: block;
+            padding: 16px;
+            text-decoration: none;
+            width: 150px;
+            height: 50px;
+            border-radius: 10px;
+            background-color: rgb(159, 152, 26);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         }

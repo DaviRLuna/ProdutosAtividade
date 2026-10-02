@@ -184,6 +184,121 @@ const catalagoProdutos = [
         tipo: 'Jogo',
         data: '06/09/2023',
         preco: 'R$249,90'
+    },
+
+    {
+        imagem: "assets/images/quadrinhos/Watchmen.jpg",
+        produto: 'Watchmen',
+        descricao: 'Edição definitiva, DC Comics, capa dura, 448 páginas',
+        tipo: 'Quadrinho',
+        data: '01/09/1986',
+        preco: 'R$149,90'
+    },
+    {
+        imagem: "assets/images/quadrinhos/Sandman.webp",
+        produto: 'Sandman: Volume 1',
+        descricao: 'Prelúdios e Noturnos, Neil Gaiman, Vertigo, capa dura',
+        tipo: 'Quadrinho',
+        data: '29/11/1989',
+        preco: 'R$119,90'
+    },
+    {
+        imagem: "assets/images/quadrinhos/batman.webp",
+        produto: 'Batman: O Cavaleiro das Trevas',
+        descricao: 'Frank Miller, DC Comics, edição de luxo, capa dura',
+        tipo: 'Quadrinho',
+        data: '01/02/1986',
+        preco: 'R$129,90'
+    },
+    {
+        imagem: "assets/images/quadrinhos/berserk.webp",
+        produto: 'Berserk: Volume 1',
+        descricao: 'Kentaro Miura, mangá, edição de luxo, capa dura',
+        tipo: 'Quadrinho',
+        data: '25/11/1989',
+        preco: 'R$109,90'
+    },
+
+    {
+        imagem: "assets/images/camisas/nirvana.png",
+        produto: 'Camiseta Nirvana Smiley',
+        descricao: '100% algodão, estampa frontal, modelagem regular, cor preta',
+        tipo: 'Camisa',
+        data: '10/03/2024',
+        preco: 'R$89,90'
+    },
+    {
+        imagem: "assets/images/camisas/zelda.png",
+        produto: 'Camiseta Zelda Triforce',
+        descricao: '100% algodão, estampa frontal, modelagem regular, cor verde',
+        tipo: 'Camisa',
+        data: '15/05/2024',
+        preco: 'R$79,90'
+    },
+    {
+        imagem: "assets/images/camisas/darthVader.png",
+        produto: 'Camiseta Star Wars Darth Vader',
+        descricao: 'Algodão e poliéster, estampa frontal, modelagem slim, cor preta',
+        tipo: 'Camisa',
+        data: '04/05/2024',
+        preco: 'R$99,90'
+    },
+    {
+        imagem: "assets/images/camisas/batmanCamisa.png",
+        produto: 'Camiseta Batman Logo',
+        descricao: '100% algodão, estampa frontal, modelagem regular, cor cinza',
+        tipo: 'Camisa',
+        data: '20/06/2024',
+        preco: 'R$84,90'
+    },
+    {
+        imagem: "assets/images/camisas/pikachu.png",
+        produto: 'Camiseta Pokémon Pikachu',
+        descricao: '100% algodão, estampa frontal, modelagem regular, cor amarela',
+        tipo: 'Camisa',
+        data: '27/02/2024',
+        preco: 'R$74,90'
+    },
+
+    {
+        imagem: "assets/images/actionfigures/Kratos.png",
+        produto: 'Action Figure Kratos',
+        descricao: 'God of War, 18 cm de altura, articulado, acompanha machado',
+        tipo: 'Action Figure',
+        data: '09/11/2022',
+        preco: 'R$399,90'
+    },
+    {
+        imagem: "assets/images/actionfigures/spiderman.png",
+        produto: 'Action Figure Homem-Aranha',
+        descricao: 'Marvel Legends, 15 cm de altura, articulado, com acessórios',
+        tipo: 'Action Figure',
+        data: '12/08/2023',
+        preco: 'R$249,90'
+    },
+    {
+        imagem: "assets/images/actionfigures/goku.png",
+        produto: 'Action Figure Goku',
+        descricao: 'Dragon Ball Z, 17 cm de altura, articulado, base inclusa',
+        tipo: 'Action Figure',
+        data: '18/03/2023',
+        preco: 'R$299,90'
+    },
+    {
+        imagem: "assets/images/actionfigures/batmanboneco.png",
+        produto: 'Action Figure Batman',
+        descricao: 'DC Multiverse, 18 cm de altura, articulado, com batarangues',
+        tipo: 'Action Figure',
+        data: '22/10/2023',
+        preco: 'R$279,90'
+    },
+    {
+        imagem: "assets/images/actionfigures/mario.png",
+        produto: 'Action Figure Mario',
+        descricao: 'Super Mario, 10 cm de altura, articulado, com cogumelo',
+        tipo: 'Action Figure',
+        data: '03/04/2023',
+        preco: 'R$149,90'
     }
 ];
         const sectionCards = document.getElementById('container');
@@ -197,14 +312,19 @@ const catalagoProdutos = [
                 const Produto = document.createElement('p');
                 const Titulo = document.createElement('h2');
                 const img = document.createElement('img');
+                const comprar = document.createElement('button');
 
                 Titulo.textContent = produtos.produto
-                Produto.innerHTML = `<br> ${produtos.descricao} <br> ${produtos.tipo} <br> ${produtos.data} <br> ${produtos.preco}`;
+                Produto.innerHTML = `<br> ${produtos.descricao} <br> ${produtos.tipo} <br> ${produtos.data} <br>`;
+                comprar.textContent = produtos.preco;
+
+                comprar.classList.add('buttonComprar');
                 img.src = produtos.imagem;
                 Caixa.classList.add('caixa');
                 Caixa.appendChild(img);
                 Caixa.appendChild(Titulo);
                 Caixa.appendChild(Produto);
+                Caixa.appendChild(comprar);
                 sectionCards.appendChild(Caixa);
             })
         }
